@@ -15,42 +15,57 @@ Samuel Ferreira: samuel.ferralves@gmail.com<br>
 > Uma luderia está se preparando para abrir e solicitou o desenvolvimento de um sistema para apoiar algumas de suas atividades. Luderia é um local onde grupos podem se divertir com jogos de tabuleiro, cartas e RPG enquanto podem comer e beber, como um bar. A luderia em questão precisará de auxílio em alguns campos específicos, como catálogo de  jogos, manutenção dos jogos e controle de comandas. Há duas formas de usufruir dos serviços da luderia. Na primeira, os clientes pagam por um período de tempo e podem jogar quantos jogos desejarem, além de suas expansões, respeitando que só deve haver na mesa um jogo por vez. Na segunda forma, os clientes pagam por um jogo específico, mas precisam pagar um valor extra por cada expansão que desejarem, e caso queiram jogar outro jogo, deverão pagar pelo mesmo. Quando os clientes escolhem uma mesa, deve ser gerada uma comanda única, onde devem constar o número da mesa, funcionário responsável pela mesa, o modo de cobrança, os jogos utilizados e, para o modo de cobrança por tempo, o tempo total gasto pelos clientes da mesa. Deve haver uma forma de exibir os jogos disponíveis aos clientes. Os jogos precisam de manutenção quando a luderia os adquire, e também passam por uma manutenção periódica. A Luderia pode possuir mais de uma unidade de alguns dos jogos. Deve haver uma forma de exibir ao funcionário todos os jogos, a quantidade de cada um e permitir que ele informe sobre a disponibilidade de cada exemplar de cada jogo. Um jogo estará disponível caso haja uma unidade que não esteja necessitando de manutenção e não esteja em uso. Um funcionário da luderia é quem retira os jogos do estoque e entrega na mesa. Após a devolução de um jogo, o funcionário verifica se está tudo certo. Caso haja algum dano, uma multa será aplicada e o jogo separado para manutenção. A luderia deseja fornecer aos clientes uma forma de consultar o cardápio de alimentos de forma digital. Ainda é necessário possibilitar que os clientes recebam informações sobre promoções, sendo necessário que forneçam alguma forma de contato. 
 
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
-#### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
-    
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
+A empresa da luderia precisa inicialmente dos seguintes relatórios:
+* Relatório que mostre os jogos disponíveis aos clientes.<br>
+* Relatório que mostre a lotação da luderia em certos horários com base nos clientes e mesas.<br>
+* Relatório que mostre os produtos (jogos e alimentos) mais consumidos na luderia durante um período especificado.<br>
+* Relatório que mostre a frequência de clientes em um período de tempo específico.<br>
+* Relatório que mostre o valor recebido no dia.<br>
 
-    
 ### 5.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
-        
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual")
-    
+
+#### A) Modelo conceitual (Feito utilizando o BRModelo)
+
+![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/101228980/435380cf-5f4a-4c7b-9ff3-08fbb20390e1)
+
+#### B) As entidades mais importantes são:
+* COMANDA
+* JOGO
+* MESA
+#### C) Principais fluxos de informação/entidades do sistema são:<br>
+* JOGO → COMANDA
+* MESA → COMANDA
+* ALIMENTO → COMANDA
+* CLIENTE → COMANDA
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+	Grupo 09: Erick Komati, Jhonata Polito
+	[Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+	CLIENTE: Tabela que armazena as informações relativas ao cliente.
+	NOME: campo que armazena o nome de cada cliente da luderia.
+	CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da luderia.
+	
+	MESA: Tabela que armazena todas as mesas da luderia.
+	NUMERO_MESA: campo que armazena o identificador da mesa.
+	CAPACIDADE: campo que armazena a capacidade de cada mesa.
+	
+	COMANDA: Tabela que armazena todas as comandas da luderia.
+	QTD_PESSOAS: campo que armazena a quantidade de pessoas utilizando cada comanda.
+	MODO_COBRANCA: campo que armazena o modo de cobrança escolhido pelo cliente responsável pela comanda.
+	TEMPO_GASTO: campo que armazena o tempo gasto pelo cliente responsável pela comanda na luderia.
+	MULTAS: campo que armazena as multas (se houver) a serem pagas pelo responsável pela comanda.
+	
+	ALIMENTO: Tabela que armazena o cardápio.
+	NOME: campo que armazena o nome do alimento (ex.: coca-cola) .
+	
+	JOGO: Tabela que armazena os jogos disponíveis.
+	NOME: campo que armazena o nome do jogo (ex.: uno).
+	CODIGO: campo que armazena o código identificador do jogo.
+	ESTADO_CONSERV: campo que armazena o estado de conservação do jogo
+	TEMPO_MANUTENCAO: campo que armazena o tempo que o jogo demora na manutenção.
+
 
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
