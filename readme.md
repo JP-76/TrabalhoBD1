@@ -40,7 +40,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
     
 #### 5.1 Validação do Modelo Conceitual
 	Grupo 09: Erick Komati, Jhonata Polito
-	[Grupo02]: [Nomes dos que participaram na avaliação]
+	Grupo 02: Bruno Plazzi, Filipe Suhett, Giovanna Scalfoni, Caio Daniel
 
 #### 5.2 Descrição dos dados 
 	CLIENTE: Tabela que armazena as informações relativas ao cliente.
