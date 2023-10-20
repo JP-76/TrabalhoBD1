@@ -74,6 +74,8 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
 
+ ![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/116752185/78edef76-5e1e-498d-b807-62ef5ecc286c)
+
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         (criação de tabelas, alterações, etc..) 
