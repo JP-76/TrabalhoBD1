@@ -26,7 +26,9 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 #### A) Modelo conceitual (Feito utilizando o BRModelo)
 
-![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/101228980/435380cf-5f4a-4c7b-9ff3-08fbb20390e1)
+
+![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/101228980/cd587737-41da-4e13-930e-95ad9ac4ad5a)
+
 
 #### B) As entidades mais importantes são:
 * COMANDA
@@ -74,7 +76,9 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
 
- ![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/116752185/78edef76-5e1e-498d-b807-62ef5ecc286c)
+
+![logico](https://github.com/JP-76/TrabalhoBD1/assets/101228980/e21d97ec-294f-4cbe-b1da-5c2d36c497bb)
+
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
