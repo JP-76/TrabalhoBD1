@@ -37,7 +37,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 #### C) Principais fluxos de informação/entidades do sistema são:<br>
 * JOGO → COMANDA
 * MESA → COMANDA
-* ALIMENTO → COMANDA
+* MODO_COBRANCA → COMANDA
 * CLIENTE → COMANDA
     
 #### 5.1 Validação do Modelo Conceitual
