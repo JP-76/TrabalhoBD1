@@ -18,7 +18,7 @@ Samuel Ferreira: samuel.ferralves@gmail.com<br>
 A empresa da luderia precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre os jogos disponíveis aos clientes.<br>
 * Relatório que mostre a lotação da luderia em certos horários com base nos clientes e mesas.<br>
-* Relatório que mostre os produtos (jogos e alimentos) mais consumidos na luderia durante um período especificado.<br>
+* Relatório que mostre os produtos mais consumidos na luderia durante um período especificado.<br>
 * Relatório que mostre a frequência de clientes em um período de tempo específico.<br>
 * Relatório que mostre o valor recebido no dia.<br>
 
@@ -48,6 +48,8 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	CLIENTE: Tabela que armazena as informações relativas ao cliente.
 	NOME: campo que armazena o nome de cada cliente da luderia.
 	CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da luderia.
+ 	SEXO: campo que armazena o sexo do cliente.
+  	IDADE: campo que armazena a idade do cliente.
 	
 	MESA: Tabela que armazena todas as mesas da luderia.
 	NUMERO_MESA: campo que armazena o identificador da mesa.
@@ -55,18 +57,19 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	
 	COMANDA: Tabela que armazena todas as comandas da luderia.
 	QTD_PESSOAS: campo que armazena a quantidade de pessoas utilizando cada comanda.
-	MODO_COBRANCA: campo que armazena o modo de cobrança escolhido pelo cliente responsável pela comanda.
 	TEMPO_GASTO: campo que armazena o tempo gasto pelo cliente responsável pela comanda na luderia.
 	MULTAS: campo que armazena as multas (se houver) a serem pagas pelo responsável pela comanda.
-	
-	ALIMENTO: Tabela que armazena o cardápio.
-	NOME: campo que armazena o nome do alimento (ex.: coca-cola) .
-	
+
+	MODO_COBRANCA: tabela que armazena o modo de cobrança escolhido pelo cliente responsável pela comanda.
+ 	MODO: campo que armazena o modo de cobrança escolhido pelo cliente.
+ 
 	JOGO: Tabela que armazena os jogos disponíveis.
 	NOME: campo que armazena o nome do jogo (ex.: uno).
 	CODIGO: campo que armazena o código identificador do jogo.
-	ESTADO_CONSERV: campo que armazena o estado de conservação do jogo
 	TEMPO_MANUTENCAO: campo que armazena o tempo que o jogo demora na manutenção.
+
+ 	ESTADO_CONSERVACAO: tabela que armazena o estado de conservação dos jogos.
+  	ESTADO: campo que armazena o estado de conservação dos jogos.
 
 
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
