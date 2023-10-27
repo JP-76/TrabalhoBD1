@@ -75,10 +75,6 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
-
 
 ![logico](https://github.com/JP-76/TrabalhoBD1/assets/101228980/e21d97ec-294f-4cbe-b1da-5c2d36c497bb)
 
