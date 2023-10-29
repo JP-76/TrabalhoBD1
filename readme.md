@@ -76,7 +76,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 ### 6	MODELO LÓGICO<br>
 
-![logico](https://github.com/JP-76/TrabalhoBD1/assets/101228980/e21d97ec-294f-4cbe-b1da-5c2d36c497bb)
+![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b2eeeb03-75ea-4084-90e1-40bcdd7dd957)
 
 
 ### 7	MODELO FÍSICO<br>
