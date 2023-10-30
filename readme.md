@@ -79,18 +79,165 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 ![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b2eeeb03-75ea-4084-90e1-40bcdd7dd957)
 
 
-### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
+### 7	MODELO FÍSICO
+        
+	DROP TABLE IF EXISTS cliente cascade;
+	DROP TABLE IF EXISTS jogo cascade;
+	DROP TABLE IF EXISTS comanda cascade;
+	DROP TABLE IF EXISTS mesa cascade;
+	DROP TABLE IF EXISTS modo_cobranca cascade;
+	DROP TABLE IF EXISTS estado_conservacao cascade;
+	DROP TABLE IF EXISTS expansao cascade;
+	DROP TABLE IF EXISTS jogos_jogados cascade;
+	DROP TABLE IF EXISTS Conservacao_Jogo cascade;
+	
+	
+	CREATE TABLE CLIENTE (
+	    id SERIAL PRIMARY KEY,
+	    nome VARCHAR,
+	    cpf VARCHAR,
+	    sexo CHAR,
+	    idade INT
+	);
+	
+	CREATE TABLE JOGO (
+	    id SERIAL PRIMARY KEY,
+	    nome VARCHAR,
+	    codigo VARCHAR,
+	    tempo_manutencao TIME
+	);
+	
+	CREATE TABLE COMANDA (
+	    id SERIAL PRIMARY KEY,
+	    qtd_pessoas INT,
+	    multas FLOAT,
+	    tempo_gasto TIMESTAMP,
+	    FK_CLIENTE_id SERIAL,
+	    FK_MESA_Id SERIAL,
+	    FK_MODO_COBRANCA_id SERIAL
+	);
+	
+	
+	
+	CREATE TABLE MESA (
+	    Id SERIAL PRIMARY KEY,
+	    capacidade INT,
+	    numero_mesa VARCHAR
+	);
+	
+	CREATE TABLE MODO_COBRANCA (
+	    id SERIAL PRIMARY key,
+		modo CHAR
+	);
+	
+	CREATE TABLE ESTADO_CONSERVACAO (
+	    id SERIAL PRIMARY key,
+		estado VARCHAR
+	    
+	);
+	
+	CREATE TABLE Expansao (
+	    fk_JOGO_id SERIAL,
+	    fk_EXPANSAO_id SERIAL
+	);
+	
+	CREATE TABLE Jogos_Jogados (
+	    fk_JOGO_id SERIAL,
+	    fk_COMANDA_id SERIAL
+	);
+	
+	CREATE TABLE Conservacao_Jogo (
+	    fk_ESTADO_CONSERVACAO_id SERIAL,
+	    fk_JOGO_id SERIAL
+	);
+	 
+	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_2
+	    FOREIGN KEY (FK_CLIENTE_id)
+	    REFERENCES CLIENTE (id);
+	 
+	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_3
+	    FOREIGN KEY (FK_MESA_Id)
+	    REFERENCES MESA (Id);
+	 
+	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_4
+	    FOREIGN KEY (FK_MODO_COBRANCA_id)
+	    REFERENCES MODO_COBRANCA (id);
+	 
+	ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_1
+	    FOREIGN KEY (fk_JOGO_id)
+	    REFERENCES JOGO (id);
+	 
+	ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_2
+	    FOREIGN KEY (fk_EXPANSAO_id)
+	    REFERENCES JOGO (id);
+	 
+	ALTER TABLE Jogos_Jogados ADD CONSTRAINT FK_Jogos_Jogados_1
+	    FOREIGN KEY (fk_JOGO_id)
+	    REFERENCES JOGO (id);
+	 
+	ALTER TABLE Jogos_Jogados ADD CONSTRAINT FK_Jogos_Jogados_2
+	    FOREIGN KEY (fk_COMANDA_id)
+	    REFERENCES COMANDA (id);
+	 
+	ALTER TABLE Conservacao_Jogo ADD CONSTRAINT FK_Possui_1
+	    FOREIGN KEY (fk_ESTADO_CONSERVACAO_id)
+	    REFERENCES ESTADO_CONSERVACAO (id);
+	 
+	ALTER TABLE Conservacao_Jogo ADD CONSTRAINT FK_Possui_2
+	    FOREIGN KEY (fk_JOGO_id)
+	    REFERENCES JOGO (id);
 
       
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) Script das instruções relativas a inclusão de dados 
-	Requisito mínimo: (Script dev conter: Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        OBS
-	1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
-        2) script deve ser incluso no template em um arquivo no formato .SQL
 
+	insert into mesa (capacidade, numero_mesa) values (4, '1');
+	insert into mesa (capacidade, numero_mesa) values (2, '2');
+	insert into mesa (capacidade, numero_mesa) values (4, '3');
+	insert into mesa (capacidade, numero_mesa) values (2, '4');
+	
+	insert into jogo (nome, codigo, tempo_manutencao) values ('uno', '1729', '24:00:00');
+	insert into jogo (nome, codigo, tempo_manutencao) values ('truco', '2489', '24:00:00');
+	insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg black white', '8008', '24:00:00');
+	insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg esmerald', '3030', '24:00:00');
+	
+	insert into expansao (fk_JOGO_id, fk_EXPANSAO_id) values (3,4);
+	
+	insert into estado_conservacao (estado) 
+	values  ('bom'),
+			('ok'),
+			('ruim'),
+			('péssimo');
+			
+	insert into Conservacao_Jogo (fk_ESTADO_CONSERVACAO_id, fk_JOGO_id) 
+	values  (3, 1),
+			(2, 2),
+			(3, 4),
+			(1, 2);
+			
+	insert into cliente (nome, cpf, sexo, idade) 
+	values  ('Fabiano', '12345678955', 'M', 45),
+			('Marcelo', '56548678955', 'M', 34),
+			('Tatiane', '72345628955', 'F', 29),
+			('Clara', '16541789595', 'F', 23),
+			('João', '54684895547', 'M', 69),
+			('Thiago', '98765432111', 'M', 27),
+			('Lucianne', '65498795523', 'F', 50);
+		
+		
+	insert into modo_cobranca (modo) 
+	values 	 ('T'),
+			 ('J');
+		
+		
+	insert into comanda (qtd_pessoas, multas, tempo_gasto, FK_CLIENTE_id, FK_MESA_Id, FK_MODO_COBRANCA_id)	
+	values  (4, 0.0, '2023-10-20 10:25:32', 1, 1, 1),
+			(2, 10.0, '2023-10-20 15:12:39', 3, 2, 2);
+			
+	insert into jogos_jogados (fk_JOGO_id, fk_COMANDA_id) 
+	values  (1, 1),
+			(2, 1),
+			(3, 2),
+			(3, 2);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing<br>
