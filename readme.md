@@ -79,7 +79,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 ![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b2eeeb03-75ea-4084-90e1-40bcdd7dd957)
 
 
-### 7	MODELO FÍSICO
+### 7	[MODELO FÍSICO](script-create.sql)
         
 	DROP TABLE IF EXISTS cliente cascade;
 	DROP TABLE IF EXISTS jogo cascade;
@@ -188,7 +188,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	    REFERENCES JOGO (id);
 
       
-### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+### 8	[INSERT APLICADO NAS TABELAS DO BANCO DE DADOS](script-insert.sql)
 
 	insert into mesa (capacidade, numero_mesa) values (4, '1');
 	insert into mesa (capacidade, numero_mesa) values (2, '2');
