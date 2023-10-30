@@ -71,9 +71,6 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
  	ESTADO_CONSERVACAO: tabela que armazena o estado de conservação dos jogos.
   	ESTADO: campo que armazena o estado de conservação dos jogos.
 
-
-># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
-
 ### 6	MODELO LÓGICO<br>
 
 ![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b2eeeb03-75ea-4084-90e1-40bcdd7dd957)
@@ -241,7 +238,25 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing<br>
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
+
+![cliente](https://github.com/JP-76/TrabalhoBD1/assets/116752185/485fbaee-f6e6-47aa-83f1-3377d8825c36)
+
+![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4ed87138-60c0-4f19-8a25-77144be7ce29)
+
+![comanda](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c2ad7769-7946-4534-ac5c-2f3bf2089a0b)
+
+![mesa](https://github.com/JP-76/TrabalhoBD1/assets/116752185/105eba2e-1756-47ee-a010-ae697bfb2036)
+
+![modo_cobranca](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4d87531d-b386-4a88-8a63-59730d304998)
+
+![estado_conservacao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1fd01630-74c1-40f3-8531-b4db4378e567)
+
+![conservacao_jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d457dc31-388a-4b10-b2ee-e35f755365d8)
+
+![jogos_jogados](https://github.com/JP-76/TrabalhoBD1/assets/116752185/24f3d5e0-5990-4aba-92d0-c96f9dc91a40)
+
+![expansao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/85520860-ccf7-4afc-a4c9-ee84dbb06b98)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
