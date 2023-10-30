@@ -93,7 +93,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Usa template da disciplina disponibilizado no Colab.<br>
+    Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
