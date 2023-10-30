@@ -258,7 +258,19 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 ![expansao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/85520860-ccf7-4afc-a4c9-ee84dbb06b98)
 
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
+
+![Lucianne](https://github.com/JP-76/TrabalhoBD1/assets/116752185/0603ba82-a311-4c6e-8a93-a2c35485ef2b)<br>
+	> SELECT nome FROM cliente WHERE nome = 'Lucianne'
+
+![masculino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/81c0bf38-a72a-4c7e-8313-51de88d41254)<br>
+	> SELECT * FROM cliente WHERE sexo = 'M'
+
+![menos30](https://github.com/JP-76/TrabalhoBD1/assets/116752185/81895490-6e8d-4485-b885-1cd6f7d22a8c)<br>
+	> SELECT * FROM cliente WHERE idade <= 30
+
+![feminino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/92ab76a8-cde5-455e-bf95-cfc3b070a136)<br>
+	> SELECT * FROM cliente WHERE sexo = 'F'
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
