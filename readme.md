@@ -187,54 +187,87 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
       
 ### 8	[INSERT APLICADO NAS TABELAS DO BANCO DE DADOS](script-insert.sql)
 
-	insert into mesa (capacidade, numero_mesa) values (4, '1');
-	insert into mesa (capacidade, numero_mesa) values (2, '2');
-	insert into mesa (capacidade, numero_mesa) values (4, '3');
-	insert into mesa (capacidade, numero_mesa) values (2, '4');
+	insert into cliente (nome, cpf, sexo, idade) 
+	values  ('Fabiano', '123.456.789-55', 'M', 45),
+		('Marcelo', '565.486.789-55', 'M', 34),
+		('Tatiane', '723.456.289-55', 'F', 29),
+		('Clara', '165.417.895-95', 'F', 23),
+		('João', '546.848.955-47', 'M', 69),
+		('Thiago', '987.654.321-11', 'M', 27),
+		('Lucianne', '654.987.955-23', 'F', 50),
+	        ('Renata', '456.789.123-77', 'F', 32),
+	        ('Pedro', '321.654.987-44', 'M', 41),
+	        ('Julia', '789.123.456-66', 'F', 25);
 	
-	insert into jogo (nome, codigo, tempo_manutencao) values ('uno', '1729', '24:00:00');
-	insert into jogo (nome, codigo, tempo_manutencao) values ('truco', '2489', '24:00:00');
-	insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg black white', '8008', '24:00:00');
-	insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg esmerald', '3030', '24:00:00');
+	insert into mesa (capacidade, numero_mesa) 
+	values (4, '1'),
+	       (2, '2'),
+	       (4, '3'),
+	       (2, '4'),
+	       (6, '5'),
+	       (4, '6'),
+	       (8, '7'),
+	       (6, '8'),
+	       (4, '9'),
+	       (2, '10');
 	
-	insert into expansao (fk_JOGO_id, fk_EXPANSAO_id) values (3,4);
+	insert into jogo (nome, codigo, tempo_manutencao)
+	values ('uno', '1729', '02:00:00'),
+	       ('truco', '2489', '10:00:00'),
+	       ('pokemon tcg black white', '8008', '12:00:00'),
+	       ('pokemon tcg emerald', '3030', '20:00:00'),
+	       ('dominó', '4567', '01:30:00'),
+	       ('xadrez', '9876', '05:00:00'),
+	       ('monopoly', '1234', '08:00:00'),
+	       ('war', '4321', '15:00:00'),
+	       ('magic the gathering', '6789', '18:00:00'),
+	       ('jogo da vida', '8765', '03:00:00');
+	
+	insert into modo_cobranca (modo) 
+	values  ('T'),
+		('J');
+			 
+	insert into expansao (fk_JOGO_id, fk_EXPANSAO_id)
+	values (3,4);
 	
 	insert into estado_conservacao (estado) 
 	values  ('bom'),
-			('ok'),
-			('ruim'),
-			('péssimo');
-			
-	insert into Conservacao_Jogo (fk_ESTADO_CONSERVACAO_id, fk_JOGO_id) 
-	values  (3, 1),
-			(2, 2),
-			(3, 4),
-			(1, 2);
-			
-	insert into cliente (nome, cpf, sexo, idade) 
-	values  ('Fabiano', '12345678955', 'M', 45),
-			('Marcelo', '56548678955', 'M', 34),
-			('Tatiane', '72345628955', 'F', 29),
-			('Clara', '16541789595', 'F', 23),
-			('João', '54684895547', 'M', 69),
-			('Thiago', '98765432111', 'M', 27),
-			('Lucianne', '65498795523', 'F', 50);
-		
-		
-	insert into modo_cobranca (modo) 
-	values 	 ('T'),
-			 ('J');
-		
+		('ok'),
+		('ruim'),
+		('péssimo');
 		
 	insert into comanda (qtd_pessoas, multas, tempo_gasto, FK_CLIENTE_id, FK_MESA_Id, FK_MODO_COBRANCA_id)	
 	values  (4, 0.0, '2023-10-20 10:25:32', 1, 1, 1),
-			(2, 10.0, '2023-10-20 15:12:39', 3, 2, 2);
+		(2, 10.0, '2023-10-20 15:12:39', 3, 2, 2),
+		(5, 0.0, '2023-10-20 16:01:42', 7, 5, 2),
+		(1, 0.0, '2023-10-20 23:00:00', 9, 4, 1),
+		(8, 15.0, '2023-10-21 13:24:33', 10, 7, 2),
+		(3, 0.0, '2023-10-21 13:51:57', 2, 6, 1),
+		(4, 0.0, '2023-10-21 14:10:21', 5, 1, 1);
 			
+	insert into Conservacao_Jogo (fk_ESTADO_CONSERVACAO_id, fk_JOGO_id) 
+	values  (3, 1),
+		(2, 2),
+		(3, 4),
+		(1, 2),
+	        (4, 5),
+	        (2, 6),
+	        (3, 7),
+	        (1, 8),
+	        (4, 9),
+	        (2, 10);
+	
 	insert into jogos_jogados (fk_JOGO_id, fk_COMANDA_id) 
 	values  (1, 1),
-			(2, 1),
-			(3, 2),
-			(3, 2);
+		(2, 1),
+		(3, 2),
+		(3, 2),
+		(4, 2),
+		(7, 5),
+		(10, 5),
+		(9, 4),
+		(3, 2),
+		(7, 1);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing
