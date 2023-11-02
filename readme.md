@@ -273,48 +273,121 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
     Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
-![cliente](https://github.com/JP-76/TrabalhoBD1/assets/116752185/485fbaee-f6e6-47aa-83f1-3377d8825c36)
 
-![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4ed87138-60c0-4f19-8a25-77144be7ce29)
+![cliente](https://github.com/JP-76/TrabalhoBD1/assets/116752185/afbaed85-e319-4242-8fa6-d8cfd0f0711c)
 
-![comanda](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c2ad7769-7946-4534-ac5c-2f3bf2089a0b)
+![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2480e8f4-26f6-415d-b334-f9ad388f39a2)
 
-![mesa](https://github.com/JP-76/TrabalhoBD1/assets/116752185/105eba2e-1756-47ee-a010-ae697bfb2036)
+![comanda](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3e3c8b2d-18e7-4603-8a12-9329d417fa0f)
 
-![modo_cobranca](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4d87531d-b386-4a88-8a63-59730d304998)
+![mesa](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bff92a3a-2b48-4504-befa-f69fe714d421)
 
-![estado_conservacao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1fd01630-74c1-40f3-8531-b4db4378e567)
+![modo_cobranca](https://github.com/JP-76/TrabalhoBD1/assets/116752185/48f47bca-0f7a-468f-b093-a52aec0d5fb0)
 
-![conservacao_jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d457dc31-388a-4b10-b2ee-e35f755365d8)
+![estado_conservacao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4bc0e8e2-3778-4a87-a60c-55db83a54a67)
 
-![jogos_jogados](https://github.com/JP-76/TrabalhoBD1/assets/116752185/24f3d5e0-5990-4aba-92d0-c96f9dc91a40)
+![conservacao_jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4706b0a2-0553-4b2f-ab11-d39bce52624e)
 
-![expansao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/85520860-ccf7-4afc-a4c9-ee84dbb06b98)
+![jogos_jogados](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d32cd7ba-1149-4936-86ed-b85c801e533c)
+
+![expansao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/72c00dff-c1f3-4cb8-9249-cff24ae1db08)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
 
-![Lucianne](https://github.com/JP-76/TrabalhoBD1/assets/116752185/0603ba82-a311-4c6e-8a93-a2c35485ef2b)<br>
-	> SELECT nome FROM cliente WHERE nome = 'Lucianne'
+![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e84259e9-da79-428a-a6cb-b4fecf3e46e7)<br>
+	SELECT * FROM jogo WHERE codigo = '8008'
 
-![masculino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/81c0bf38-a72a-4c7e-8313-51de88d41254)<br>
-	> SELECT * FROM cliente WHERE sexo = 'M'
+![masculino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3717e942-b507-4468-b337-3edf0038d5ce)<br>
+	SELECT * FROM cliente WHERE sexo = 'M'
 
-![menos30](https://github.com/JP-76/TrabalhoBD1/assets/116752185/81895490-6e8d-4485-b885-1cd6f7d22a8c)<br>
-	> SELECT * FROM cliente WHERE idade <= 30
+![menos30](https://github.com/JP-76/TrabalhoBD1/assets/116752185/916db566-cf5a-4fec-a220-b21c63d29f9b)<br>
+	SELECT * FROM cliente WHERE idade <= 30
 
-![feminino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/92ab76a8-cde5-455e-bf95-cfc3b070a136)<br>
-	> SELECT * FROM cliente WHERE sexo = 'F'
+![feminino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2d7b57e2-a670-497a-ab62-bbff8cfe3b82)<br>
+	SELECT * FROM cliente WHERE sexo = 'F'
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
 
-># Marco de Entrega 02: Do item 6. até o item 9.1 (5 PTS) <br>
+##### 9.3.1 Consultas com operadores lógicos
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1b989728-53db-44db-85f8-84c0d9e6a8cb)<br>
+	SELECT * FROM comanda WHERE fk_mesa_id = 1 AND fk_modo_cobranca_id = 1
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b8247592-9270-4831-8c48-dfeb1581aae9)<br>
+	SELECT * FROM mesa WHERE (capacidade > 3 And numero_mesa = '3')
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/a883a236-0a55-4731-a507-1073b02e61c0)<br>
+	SELECT * FROM comanda WHERE multas < 2 and fk_mesa_id = 1
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/80fea8d4-0b9d-4bda-b030-dd788bb8e55a)<br>
+	SELECT * FROM cliente WHERE not idade > 25
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e9126338-4ba4-47e0-a162-a9cb7c318ae1)<br>
+	SELECT * FROM estado_conservacao WHERE not estado = 'bom'
+
+
+##### 9.3.2 Consultas com operadores aritméticos
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/92ee171e-2b50-4b9f-b442-85bd8000d060)<br>
+	SELECT capacidade + 2 AS "capacidade mais dois" FROM mesa
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2452ecba-0e67-4787-bed6-d890c6e7fd73)<br>
+	SELECT capacidade / 2 AS "capacidade dividido por 2" FROM mesa
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/9354ec95-819c-4699-8ba8-bd3cdf93e713)<br>
+	SELECT qtd_pessoas / 2 AS "quant pessoas por 2" FROM comanda
+
+ 
+##### 9.3.3 Consultas com campos/tabelas renomeadas
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c6d9e6c1-903c-475e-b345-5bfd638dd110)<br>
+	SELECT nome, codigo as id FROM jogo
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/550a0ac8-6625-4e42-99fd-2b09034f1496)<br>
+	SELECT nome, cpf as identidade FROM cliente
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/307a0c42-2be3-41fd-bad8-4271a25bf81f)<br>
+	SELECT estado as condicao FROM estado_conservacao
+
+
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
+
+##### 9.4.1 Consultas com LIKE/ILIKE
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/ea05d7ae-0e97-4281-9197-03ed626914b1)<br>
+	SELECT * FROM cliente WHERE nome LIKE '%a%' or nome LIKE 'A%' or nome LIKE '%a'
+ 
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3e27812d-15bd-42bc-a433-7b055ec262d5)<br>
+	SELECT * FROM cliente WHERE nome ILIKE '%o%' or nome ILIKE 'o%' or nome ILIKE '%o'
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e74977dd-3cd4-4c76-8816-3f1b34191a23)<br>
+	SELECT * FROM jogo WHERE nome ILIKE '%o'
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bb0a22fd-5f8b-4b83-b37c-9a89b1acd478)<br>
+	SELECT * FROM jogo WHERE nome ILIKE '%tcg%'
+ 
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d09e236f-dc9b-4527-b290-563d853eab7e)<br>
+	SELECT nome, cpf FROM cliente WHERE cpf ILIKE '%5_'
+
+
+##### 9.4.2 Consultas com funções de data
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1bf15610-c075-4d3b-9610-45af1a557d6f)<br>
+	SELECT nome, date_part('year', current_date) - idade AS data_de_nascimento FROM cliente
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/402f16df-a2b6-45a0-9ff7-b58ffb3e90c2)<br>
+	SELECT fk_mesa_id as mesa, (date_part('hour', current_time) - 3) - date_part('hour', tempo_gasto) AS horas_passadas FROM comanda
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b7c1cd00-b807-44b9-ae4b-5bb9a2bd400f)<br>
+	SELECT fk_mesa_id as mesa, date_part('hour', tempo_gasto) - (date_part('hour', current_time) - 3) AS horas_passadas FROM comanda
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/f4315833-fef6-4060-aef5-8b78e684d78e)<br>
+	SELECT fk_mesa_id as mesa, date_part('hour', tempo_gasto) - (date_part('hour', now()) - 3) AS horas_passadas FROM comanda
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c31e2b8c-467c-4f3c-bdad-7881d9da9ffc)<br>
+	SELECT fk_mesa_id as mesa, extract('hour' from tempo_gasto) - (extract('hour' from now()) - 3) AS horas_passadas FROM comanda
+ 
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
