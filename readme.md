@@ -394,14 +394,70 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
     b) Criar minimo 3 de atualização
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e7277f8e-221c-406f-a328-1c01fcad847b)
+SELECT DISTINCT<br>
+         mesa.numero_mesa,<br>
+         tempo_gasto AS data_entrada,<br>
+         clt.nome AS nome_cliente,<br>
+         clt.cpf AS cpf_cliente,<br>
+         jogo.nome AS nome_jogo,<br>
+         jogo.codigo AS codigo_jogo,<br>
+         modo_cobranca.modo AS modo_cobranca,<br>
+         cons.estado AS estado_conservacao,<br>
+         multas<br>
+FROM comanda cmd<br>
+INNER JOIN cliente clt<br>
+ON (cmd.fk_cliente_id = clt.id)<br>
+INNER JOIN mesa<br>
+ON (cmd.fk_mesa_id = mesa.id)<br>
+INNER JOIN jogos_jogados jogados<br>
+ON (cmd.id = jogados.fk_comanda_id)<br>
+INNER JOIN jogo<br>
+ON (jogados.fk_jogo_id = jogo.id)<br>
+INNER JOIN modo_cobranca<br>
+ON (cmd.fk_modo_cobranca_id = modo_cobranca.id)<br>
+INNER JOIN conservacao_Jogo cons_jogo<br>
+ON (cons_jogo.fk_jogo_id = jogo.id)<br>
+INNER JOIN estado_conservacao cons<br>
+ON (cons.id = cons_jogo.fk_estado_conservacao_id)<br>
+ORDER BY cmd.tempo_gasto<br>
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
+
+##### 9.8.1 CONSULTA COM LEFT JOIN
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d6d12f06-08f9-402e-b7be-44bd363dd9ec)<br>
+SELECT numero_mesa AS mesa,<br>
+       capacidade,<br>
+       comanda.qtd_pessoas<br>
+FROM mesa LEFT OUTER JOIN comanda<br>
+ON (mesa.id = comanda.fk_mesa_id)<br>
+ORDER BY mesa.capacidade<br>
+
+##### 9.8.2 CONSULTA COM RIGHT JOIN
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bb218518-b010-4721-b79f-a70780d01dad)<br>
+SELECT clt.nome,<br>
+       clt.cpf,<br>
+       multas AS valor_devido<br>
+FROM comanda cmd RIGHT OUTER JOIN cliente clt<br>
+ON (cmd.fk_cliente_id = clt.id)<br>
+ORDER BY cmd.multas<br>
+
+##### 9.8.3 CONSULTA COM FULL JOIN
+
+![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/cbf44788-cf48-4e1c-b439-cd1088907d84)<br>
+SELECT jogo.nome,<br>
+       jogo.tempo_manutencao,<br>
+       cons.estado AS estado_conservacao<br>
+FROM jogo INNER JOIN conservacao_jogo<br>
+ON (conservacao_jogo.fk_JOGO_id = jogo.id)<br>
+FULL OUTER JOIN estado_conservacao cons<br>
+ON (conservacao_jogo.fk_ESTADO_CONSERVACAO_id = cons.id)<br>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
