@@ -27,7 +27,9 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 #### A) Modelo conceitual (Feito utilizando o BRModelo)
 
 
-![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/101228980/cd587737-41da-4e13-930e-95ad9ac4ad5a)
+![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/116752185/8fb03ff0-8d11-4a65-af54-5b8e0f12e7b8)
+
+
 
 
 #### B) As entidades mais importantes são:
@@ -49,7 +51,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	NOME: campo que armazena o nome de cada cliente da luderia.
 	CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da luderia.
  	SEXO: campo que armazena o sexo do cliente.
-  	IDADE: campo que armazena a idade do cliente.
+  	DT_NASC: campo que armazena a data de nascimento do cliente.
 	
 	MESA: Tabela que armazena todas as mesas da luderia.
 	NUMERO_MESA: campo que armazena o identificador da mesa.
@@ -57,7 +59,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	
 	COMANDA: Tabela que armazena todas as comandas da luderia.
 	QTD_PESSOAS: campo que armazena a quantidade de pessoas utilizando cada comanda.
-	TEMPO_GASTO: campo que armazena o tempo gasto pelo cliente responsável pela comanda na luderia.
+	HORARIO_INICIO: campo que armazena o horário que o cliente responsável pela comanda chegou na luderia.
 	MULTAS: campo que armazena as multas (se houver) a serem pagas pelo responsável pela comanda.
 
 	MODO_COBRANCA: tabela que armazena o modo de cobrança escolhido pelo cliente responsável pela comanda.
@@ -73,7 +75,8 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 ### 6	MODELO LÓGICO<br>
 
-![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b2eeeb03-75ea-4084-90e1-40bcdd7dd957)
+![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/5e23617c-1a5b-44ee-8e37-eff983aefb78)
+
 
 
 ### 7	[MODELO FÍSICO](script-create.sql)
@@ -85,8 +88,8 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	DROP TABLE IF EXISTS modo_cobranca cascade;
 	DROP TABLE IF EXISTS estado_conservacao cascade;
 	DROP TABLE IF EXISTS expansao cascade;
-	DROP TABLE IF EXISTS jogos_jogados cascade;
-	DROP TABLE IF EXISTS Conservacao_Jogo cascade;
+	DROP TABLE IF EXISTS jogo_jogado cascade;
+	DROP TABLE IF EXISTS conservacao_jogo cascade;
 	
 	
 	CREATE TABLE CLIENTE (
@@ -138,7 +141,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	    fk_EXPANSAO_id SERIAL
 	);
 	
-	CREATE TABLE Jogos_Jogados (
+	CREATE TABLE Jogo_Jogado (
 	    fk_JOGO_id SERIAL,
 	    fk_COMANDA_id SERIAL
 	);
