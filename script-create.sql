@@ -1,48 +1,94 @@
-insert into mesa (capacidade, numero_mesa) values (4, '1');
-insert into mesa (capacidade, numero_mesa) values (2, '2');
-insert into mesa (capacidade, numero_mesa) values (4, '3');
-insert into mesa (capacidade, numero_mesa) values (2, '4');
+DROP TABLE IF EXISTS cliente cascade;
+DROP TABLE IF EXISTS jogo cascade;
+DROP TABLE IF EXISTS comanda cascade;
+DROP TABLE IF EXISTS mesa cascade;
+DROP TABLE IF EXISTS modo_cobranca cascade;
+DROP TABLE IF EXISTS estado_conservacao cascade;
+DROP TABLE IF EXISTS expansao cascade;
+DROP TABLE IF EXISTS jogo_jogado cascade;
 
-insert into jogo (nome, codigo, tempo_manutencao) values ('uno', '1729', '24:00:00');
-insert into jogo (nome, codigo, tempo_manutencao) values ('truco', '2489', '24:00:00');
-insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg black white', '8008', '24:00:00');
-insert into jogo (nome, codigo, tempo_manutencao) values ('pokemon tcg esmerald', '3030', '24:00:00');
 
-insert into expansao (fk_JOGO_id, fk_EXPANSAO_id) values (3,4);
+CREATE TABLE CLIENTE (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    cpf VARCHAR,
+    sexo CHAR,
+    dt_nasc DATE
+);
 
-insert into estado_conservacao (estado) 
-values  ('bom'),
-		('ok'),
-		('ruim'),
-		('péssimo');
-		
-insert into Conservacao_Jogo (fk_ESTADO_CONSERVACAO_id, fk_JOGO_id) 
-values  (3, 1),
-		(2, 2),
-		(3, 4),
-		(1, 2);
-		
-insert into cliente (nome, cpf, sexo, idade) 
-values  ('Fabiano', '12345678955', 'M', 45),
-		('Marcelo', '56548678955', 'M', 34),
-		('Tatiane', '72345628955', 'F', 29),
-		('Clara', '16541789595', 'F', 23),
-		('João', '54684895547', 'M', 69),
-		('Thiago', '98765432111', 'M', 27),
-		('Lucianne', '65498795523', 'F', 50);
-	
-	
-insert into modo_cobranca (modo) 
-values 	 ('T'),
-		 ('J');
-	
-	
-insert into comanda (qtd_pessoas, multas, tempo_gasto, FK_CLIENTE_id, FK_MESA_Id, FK_MODO_COBRANCA_id)	
-values  (4, 0.0, '2023-10-20 10:25:32', 1, 1, 1),
-		(2, 10.0, '2023-10-20 15:12:39', 3, 2, 2);
-		
-insert into jogos_jogados (fk_JOGO_id, fk_COMANDA_id) 
-values  (1, 1),
-		(2, 1),
-		(3, 2),
-		(3, 2);
+CREATE TABLE JOGO (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    codigo VARCHAR,
+    tempo_manutencao TIME,
+    fk_ESTADO_CONSERVACAO SERIAL
+);
+
+CREATE TABLE COMANDA (
+    id SERIAL PRIMARY KEY,
+    qtd_pessoas INT,
+    multas FLOAT,
+    horario_inicio TIMESTAMP,
+    FK_CLIENTE_id SERIAL,
+    FK_MESA_Id SERIAL,
+    FK_MODO_COBRANCA_id SERIAL
+);
+
+CREATE TABLE MESA (
+    Id SERIAL PRIMARY KEY,
+    capacidade INT,
+    numero_mesa VARCHAR
+);
+
+CREATE TABLE MODO_COBRANCA (
+    id SERIAL PRIMARY key,
+	modo CHAR
+);
+
+CREATE TABLE ESTADO_CONSERVACAO (
+    id SERIAL PRIMARY key,
+	estado VARCHAR
+);
+
+CREATE TABLE Expansao (
+    fk_JOGO_id SERIAL,
+    fk_EXPANSAO_id SERIAL
+);
+
+CREATE TABLE Jogo_Jogado (
+    fk_JOGO_id SERIAL,
+    fk_COMANDA_id SERIAL
+);
+
+
+ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_1
+    FOREIGN KEY (FK_CLIENTE_id)
+    REFERENCES CLIENTE (id);
+ 
+ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_2
+    FOREIGN KEY (FK_MESA_Id)
+    REFERENCES MESA (Id);
+ 
+ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_3
+    FOREIGN KEY (FK_MODO_COBRANCA_id)
+    REFERENCES MODO_COBRANCA (id);
+ 
+ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_1
+    FOREIGN KEY (fk_JOGO_id)
+    REFERENCES JOGO (id);
+ 
+ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_2
+    FOREIGN KEY (fk_EXPANSAO_id)
+    REFERENCES JOGO (id);
+ 
+ALTER TABLE Jogo_Jogado ADD CONSTRAINT FK_Jogo_Jogado_1
+    FOREIGN KEY (fk_JOGO_id)
+    REFERENCES JOGO (id);
+ 
+ALTER TABLE Jogo_Jogado ADD CONSTRAINT FK_Jogo_Jogado_2
+    FOREIGN KEY (fk_COMANDA_id)
+    REFERENCES COMANDA (id);
+ 
+ALTER TABLE Jogo ADD CONSTRAINT FK_Conservacao_1
+    FOREIGN KEY (fk_ESTADO_CONSERVACAO)
+    REFERENCES ESTADO_CONSERVACAO (id);
