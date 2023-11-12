@@ -270,124 +270,17 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 		(7, 1);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    Link do trabalho no colab: https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing
+    
+Todas as consultas estão presentes no colab, disponível pelo url a seguir:<br>
+[Luderia - Google Colaboratory](https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing)
+
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
-
-
-![cliente](https://github.com/JP-76/TrabalhoBD1/assets/116752185/afbaed85-e319-4242-8fa6-d8cfd0f0711c)
-
-![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2480e8f4-26f6-415d-b334-f9ad388f39a2)
-
-![comanda](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3e3c8b2d-18e7-4603-8a12-9329d417fa0f)
-
-![mesa](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bff92a3a-2b48-4504-befa-f69fe714d421)
-
-![modo_cobranca](https://github.com/JP-76/TrabalhoBD1/assets/116752185/48f47bca-0f7a-468f-b093-a52aec0d5fb0)
-
-![estado_conservacao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4bc0e8e2-3778-4a87-a60c-55db83a54a67)
-
-![conservacao_jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/4706b0a2-0553-4b2f-ab11-d39bce52624e)
-
-![jogos_jogados](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d32cd7ba-1149-4936-86ed-b85c801e533c)
-
-![expansao](https://github.com/JP-76/TrabalhoBD1/assets/116752185/72c00dff-c1f3-4cb8-9249-cff24ae1db08)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
 
-![jogo](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e84259e9-da79-428a-a6cb-b4fecf3e46e7)<br>
-	SELECT * FROM jogo WHERE codigo = '8008'
-
-![masculino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3717e942-b507-4468-b337-3edf0038d5ce)<br>
-	SELECT * FROM cliente WHERE sexo = 'M'
-
-![menos30](https://github.com/JP-76/TrabalhoBD1/assets/116752185/916db566-cf5a-4fec-a220-b21c63d29f9b)<br>
-	SELECT * FROM cliente WHERE idade <= 30
-
-![feminino](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2d7b57e2-a670-497a-ab62-bbff8cfe3b82)<br>
-	SELECT * FROM cliente WHERE sexo = 'F'
-
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
-
-##### 9.3.1 Consultas com operadores lógicos
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1b989728-53db-44db-85f8-84c0d9e6a8cb)<br>
-	SELECT * FROM comanda WHERE fk_mesa_id = 1 AND fk_modo_cobranca_id = 1
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b8247592-9270-4831-8c48-dfeb1581aae9)<br>
-	SELECT * FROM mesa WHERE (capacidade > 3 And numero_mesa = '3')
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/a883a236-0a55-4731-a507-1073b02e61c0)<br>
-	SELECT * FROM comanda WHERE multas < 2 and fk_mesa_id = 1
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/80fea8d4-0b9d-4bda-b030-dd788bb8e55a)<br>
-	SELECT * FROM cliente WHERE not idade > 25
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e9126338-4ba4-47e0-a162-a9cb7c318ae1)<br>
-	SELECT * FROM estado_conservacao WHERE not estado = 'bom'
-
-
-##### 9.3.2 Consultas com operadores aritméticos
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/92ee171e-2b50-4b9f-b442-85bd8000d060)<br>
-	SELECT capacidade + 2 AS "capacidade mais dois" FROM mesa
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/2452ecba-0e67-4787-bed6-d890c6e7fd73)<br>
-	SELECT capacidade / 2 AS "capacidade dividido por 2" FROM mesa
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/9354ec95-819c-4699-8ba8-bd3cdf93e713)<br>
-	SELECT qtd_pessoas / 2 AS "quant pessoas por 2" FROM comanda
-
- 
-##### 9.3.3 Consultas com campos/tabelas renomeadas
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c6d9e6c1-903c-475e-b345-5bfd638dd110)<br>
-	SELECT nome, codigo as id FROM jogo
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/550a0ac8-6625-4e42-99fd-2b09034f1496)<br>
-	SELECT nome, cpf as identidade FROM cliente
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/307a0c42-2be3-41fd-bad8-4271a25bf81f)<br>
-	SELECT estado as condicao FROM estado_conservacao
-
-
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
-
-##### 9.4.1 Consultas com LIKE/ILIKE
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/ea05d7ae-0e97-4281-9197-03ed626914b1)<br>
-	SELECT * FROM cliente WHERE nome LIKE '%a%' or nome LIKE 'A%' or nome LIKE '%a'
- 
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/3e27812d-15bd-42bc-a433-7b055ec262d5)<br>
-	SELECT * FROM cliente WHERE nome ILIKE '%o%' or nome ILIKE 'o%' or nome ILIKE '%o'
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e74977dd-3cd4-4c76-8816-3f1b34191a23)<br>
-	SELECT * FROM jogo WHERE nome ILIKE '%o'
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bb0a22fd-5f8b-4b83-b37c-9a89b1acd478)<br>
-	SELECT * FROM jogo WHERE nome ILIKE '%tcg%'
- 
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d09e236f-dc9b-4527-b290-563d853eab7e)<br>
-	SELECT nome, cpf FROM cliente WHERE cpf ILIKE '%5_'
-
-
-##### 9.4.2 Consultas com funções de data
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/1bf15610-c075-4d3b-9610-45af1a557d6f)<br>
-	SELECT nome, date_part('year', current_date) - idade AS data_de_nascimento FROM cliente
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/402f16df-a2b6-45a0-9ff7-b58ffb3e90c2)<br>
-	SELECT fk_mesa_id as mesa, (date_part('hour', current_time) - 3) - date_part('hour', tempo_gasto) AS horas_passadas FROM comanda
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/b7c1cd00-b807-44b9-ae4b-5bb9a2bd400f)<br>
-	SELECT fk_mesa_id as mesa, date_part('hour', tempo_gasto) - (date_part('hour', current_time) - 3) AS horas_passadas FROM comanda
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/f4315833-fef6-4060-aef5-8b78e684d78e)<br>
-	SELECT fk_mesa_id as mesa, date_part('hour', tempo_gasto) - (date_part('hour', now()) - 3) AS horas_passadas FROM comanda
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/c31e2b8c-467c-4f3c-bdad-7881d9da9ffc)<br>
-	SELECT fk_mesa_id as mesa, extract('hour' from tempo_gasto) - (extract('hour' from now()) - 3) AS horas_passadas FROM comanda
- 
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
@@ -395,69 +288,10 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
 
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/e7277f8e-221c-406f-a328-1c01fcad847b)
-SELECT DISTINCT<br>
-         mesa.numero_mesa,<br>
-         tempo_gasto AS data_entrada,<br>
-         clt.nome AS nome_cliente,<br>
-         clt.cpf AS cpf_cliente,<br>
-         jogo.nome AS nome_jogo,<br>
-         jogo.codigo AS codigo_jogo,<br>
-         modo_cobranca.modo AS modo_cobranca,<br>
-         cons.estado AS estado_conservacao,<br>
-         multas<br>
-FROM comanda cmd<br>
-INNER JOIN cliente clt<br>
-ON (cmd.fk_cliente_id = clt.id)<br>
-INNER JOIN mesa<br>
-ON (cmd.fk_mesa_id = mesa.id)<br>
-INNER JOIN jogos_jogados jogados<br>
-ON (cmd.id = jogados.fk_comanda_id)<br>
-INNER JOIN jogo<br>
-ON (jogados.fk_jogo_id = jogo.id)<br>
-INNER JOIN modo_cobranca<br>
-ON (cmd.fk_modo_cobranca_id = modo_cobranca.id)<br>
-INNER JOIN conservacao_Jogo cons_jogo<br>
-ON (cons_jogo.fk_jogo_id = jogo.id)<br>
-INNER JOIN estado_conservacao cons<br>
-ON (cons.id = cons_jogo.fk_estado_conservacao_id)<br>
-ORDER BY cmd.tempo_gasto<br>
-
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-
-##### 9.8.1 CONSULTA COM LEFT JOIN
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/d6d12f06-08f9-402e-b7be-44bd363dd9ec)<br>
-SELECT numero_mesa AS mesa,<br>
-       capacidade,<br>
-       comanda.qtd_pessoas<br>
-FROM mesa LEFT OUTER JOIN comanda<br>
-ON (mesa.id = comanda.fk_mesa_id)<br>
-ORDER BY mesa.capacidade<br>
-
-##### 9.8.2 CONSULTA COM RIGHT JOIN
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/bb218518-b010-4721-b79f-a70780d01dad)<br>
-SELECT clt.nome,<br>
-       clt.cpf,<br>
-       multas AS valor_devido<br>
-FROM comanda cmd RIGHT OUTER JOIN cliente clt<br>
-ON (cmd.fk_cliente_id = clt.id)<br>
-ORDER BY cmd.multas<br>
-
-##### 9.8.3 CONSULTA COM FULL JOIN
-
-![image](https://github.com/JP-76/TrabalhoBD1/assets/116752185/cbf44788-cf48-4e1c-b439-cd1088907d84)<br>
-SELECT jogo.nome,<br>
-       jogo.tempo_manutencao,<br>
-       cons.estado AS estado_conservacao<br>
-FROM jogo INNER JOIN conservacao_jogo<br>
-ON (conservacao_jogo.fk_JOGO_id = jogo.id)<br>
-FULL OUTER JOIN estado_conservacao cons<br>
-ON (conservacao_jogo.fk_ESTADO_CONSERVACAO_id = cons.id)<br>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
