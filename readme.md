@@ -277,27 +277,25 @@ Todas as consultas (9.1 a 9.10) estão presentes no colab, disponível pelo url 
 
 [Luderia - Google Colaboratory](https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing)
 
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
+#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS
 
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
+#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE
 
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
+#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS
 
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS
 
-#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
+#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS
 
-#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)
+#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY
 
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)
+#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO
 
-#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)
+#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN
 
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+#### 9.9	CONSULTAS COM SELF JOIN E VIEW
 
-#### 9.10	SUBCONSULTAS (Mínimo 4)<br>
+#### 9.10	SUBCONSULTAS
 
 ># Marco de Entrega 03: Do item 9.2 até o ítem 9.10 (10 PTS)<br>
 
