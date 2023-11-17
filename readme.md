@@ -267,9 +267,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 		  (5, 3),
 		  (7, 1),
 		  (3, 2),
-		  (10, 6),
-		  (5, 7),
-		  (9, 7);
+		  (10, 6);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     
