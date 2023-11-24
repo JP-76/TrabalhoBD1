@@ -188,7 +188,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 		('Lucianne', '654.987.955-23', 'F', '1999-08-22'),
 	        ('Renata', '456.789.123-77', 'F', '1982-12-15'),
 	        ('Pedro', '321.654.987-44', 'M', '1990-05-07'),
-	        ('Julia', '789.123.456-66', 'F', '1972-10-20');
+	        ('Julia', '789.123.456-66', 'F', '1972-10-20'),
 	 	('Ana Silva', '123.456.789-09', 'F', '1990-01-15'),
 	    ('Carlos Oliveira', '234.567.890-12', 'M', '1985-03-22'),
 	    ('Fernanda Santos', '345.678.901-23', 'F', '2002-07-05'),
@@ -221,7 +221,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	    ('Quiteria Rocha', '012.345.678-44', 'F', '1992-06-10'),
 	    ('Ricardo Oliveira', '123.456.789-55', 'M', '1981-04-02'),
 	    ('Sofia Lima', '234.567.890-77', 'F', '2000-10-12'),
-	    ('Thiago Pereira', '345.678.901-99', 'M', '1974-03-18');
+	    ('Thiago Pereira', '345.678.901-99', 'M', '1974-03-18'),
 	    ('Vanessa Oliveira', '456.789.012-01', 'F', '1998-07-22'),
 	    ('William Lima', '567.890.123-45', 'M', '1989-04-14'),
 	    ('Ximena Souza', '678.901.234-89', 'F', '1976-11-07'),
