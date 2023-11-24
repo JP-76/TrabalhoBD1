@@ -29,6 +29,7 @@ CREATE TABLE COMANDA (
     qtd_pessoas INT,
     multas FLOAT,
     horario_inicio TIMESTAMP,
+    horario_fim TIMESTAMP,
     FK_CLIENTE_id SERIAL,
     FK_MESA_Id SERIAL,
     FK_MODO_COBRANCA_id SERIAL
