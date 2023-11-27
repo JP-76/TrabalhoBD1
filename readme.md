@@ -89,92 +89,93 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 	DROP TABLE IF EXISTS estado_conservacao cascade;
 	DROP TABLE IF EXISTS expansao cascade;
 	DROP TABLE IF EXISTS jogo_jogado cascade;
-	
-	
+
+
 	CREATE TABLE CLIENTE (
-	    id SERIAL PRIMARY KEY,
-	    nome VARCHAR,
-	    cpf VARCHAR,
-	    sexo CHAR,
-	    dt_nasc DATE
+    	id SERIAL PRIMARY KEY,
+    	nome VARCHAR,
+    	cpf VARCHAR,
+    	sexo CHAR,
+    	dt_nasc DATE
 	);
-	
+
 	CREATE TABLE JOGO (
-	    id SERIAL PRIMARY KEY,
-	    nome VARCHAR,
-	    codigo VARCHAR,
-	    tempo_manutencao TIME,
-	    fk_ESTADO_CONSERVACAO SERIAL
+    	id SERIAL PRIMARY KEY,
+    	nome VARCHAR,
+    	codigo VARCHAR,
+    	tempo_manutencao TIME,
+    	fk_ESTADO_CONSERVACAO SERIAL
 	);
-	
+
 	CREATE TABLE COMANDA (
-	    id SERIAL PRIMARY KEY,
-	    qtd_pessoas INT,
-	    multas FLOAT,
-	    horario_inicio TIMESTAMP,
-	    FK_CLIENTE_id SERIAL,
-	    FK_MESA_Id SERIAL,
-	    FK_MODO_COBRANCA_id SERIAL
+    	id SERIAL PRIMARY KEY,
+    	qtd_pessoas INT,
+    	multas FLOAT,
+    	horario_inicio TIMESTAMP,
+    	horario_fim TIMESTAMP,
+    	FK_CLIENTE_id SERIAL,
+    	FK_MESA_Id SERIAL,
+    	FK_MODO_COBRANCA_id SERIAL
 	);
-	
+
 	CREATE TABLE MESA (
-	    Id SERIAL PRIMARY KEY,
-	    capacidade INT,
-	    numero_mesa VARCHAR
+    	Id SERIAL PRIMARY KEY,
+    	capacidade INT,
+    	numero_mesa VARCHAR
 	);
-	
+
 	CREATE TABLE MODO_COBRANCA (
-	    id SERIAL PRIMARY key,
-	    modo CHAR
+    	id SERIAL PRIMARY key,
+	modo CHAR
 	);
-	
+
 	CREATE TABLE ESTADO_CONSERVACAO (
-	    id SERIAL PRIMARY key,
-	    estado VARCHAR
+    	id SERIAL PRIMARY key,
+	estado VARCHAR
 	);
-	
+
 	CREATE TABLE Expansao (
-	    fk_JOGO_id SERIAL,
-	    fk_EXPANSAO_id SERIAL
+    	fk_JOGO_id SERIAL,
+    	fk_EXPANSAO_id SERIAL
 	);
-	
+
 	CREATE TABLE Jogo_Jogado (
-	    fk_JOGO_id SERIAL,
-	    fk_COMANDA_id SERIAL
+    	fk_JOGO_id SERIAL,
+    	fk_COMANDA_id SERIAL
 	);
-	
-	
+
+
 	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_1
-	    FOREIGN KEY (FK_CLIENTE_id)
-	    REFERENCES CLIENTE (id);
-	 
+    	FOREIGN KEY (FK_CLIENTE_id)
+    	REFERENCES CLIENTE (id);
+ 
 	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_2
-	    FOREIGN KEY (FK_MESA_Id)
-	    REFERENCES MESA (Id);
-	 
+    	FOREIGN KEY (FK_MESA_Id)
+    	REFERENCES MESA (Id);
+ 
 	ALTER TABLE COMANDA ADD CONSTRAINT FK_COMANDA_3
-	    FOREIGN KEY (FK_MODO_COBRANCA_id)
-	    REFERENCES MODO_COBRANCA (id);
-	 
+    	FOREIGN KEY (FK_MODO_COBRANCA_id)
+    	REFERENCES MODO_COBRANCA (id);
+ 
 	ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_1
-	    FOREIGN KEY (fk_JOGO_id)
-	    REFERENCES JOGO (id);
-	 
+    	FOREIGN KEY (fk_JOGO_id)
+    	REFERENCES JOGO (id);
+ 
 	ALTER TABLE Expansao ADD CONSTRAINT FK_Expansao_2
-	    FOREIGN KEY (fk_EXPANSAO_id)
-	    REFERENCES JOGO (id);
-	 
+    	FOREIGN KEY (fk_EXPANSAO_id)
+    	REFERENCES JOGO (id);
+ 
 	ALTER TABLE Jogo_Jogado ADD CONSTRAINT FK_Jogo_Jogado_1
-	    FOREIGN KEY (fk_JOGO_id)
-	    REFERENCES JOGO (id);
-	 
+    	FOREIGN KEY (fk_JOGO_id)
+    	REFERENCES JOGO (id);
+ 
 	ALTER TABLE Jogo_Jogado ADD CONSTRAINT FK_Jogo_Jogado_2
-	    FOREIGN KEY (fk_COMANDA_id)
-	    REFERENCES COMANDA (id);
-	 
+    	FOREIGN KEY (fk_COMANDA_id)
+    	REFERENCES COMANDA (id);
+ 
 	ALTER TABLE Jogo ADD CONSTRAINT FK_Conservacao_1
-	    FOREIGN KEY (fk_ESTADO_CONSERVACAO)
-	    REFERENCES ESTADO_CONSERVACAO (id);
+    	FOREIGN KEY (fk_ESTADO_CONSERVACAO)
+    	REFERENCES ESTADO_CONSERVACAO (id);
       
 ### 8	[INSERT APLICADO NAS TABELAS DO BANCO DE DADOS](script-insert.sql)
 
