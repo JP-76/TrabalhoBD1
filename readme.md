@@ -16,7 +16,6 @@ Samuel Ferreira: samuel.ferralves@gmail.com<br>
 
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
 A empresa da luderia precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre os jogos disponíveis aos clientes.<br>
 * Relatório que mostre os jogos mais jogados na luderia.<br>
 * Relatório que mostre os jogos jogados por um cliente específico.<br>
 * Relatório que mostre a lotação da luderia em certos horários com base nos clientes e mesas.<br>
