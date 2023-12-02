@@ -466,8 +466,6 @@ Todas as consultas (9.1 a 9.10) estão presentes no colab, disponível pelo url 
 
 #### 9.10	SUBCONSULTAS
 
-># Marco de Entrega 03: Do item 9.2 até o ítem 9.10 (10 PTS)<br>
-
 ### 10 RELATÓRIOS E GRÁFICOS
 
 #### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
