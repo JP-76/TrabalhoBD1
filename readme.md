@@ -473,7 +473,7 @@ Todos os relatórios com seus respectivos gráficos estão disponíveis no link 
 
 Link de acesso aos slides: [Slides Pecha Kucha Luderia](https://docs.google.com/presentation/d/11dno_jRLEVtu5WiSvhsk4EX1Icg-ACdjO2u0OETqN4I/edit?usp=sharing)
 
-Link de acesso ao vídeo: [Vídeo Pecha Kucha Luderia]()
+Link de acesso ao vídeo: [Vídeo Pecha Kucha Luderia](https://youtu.be/cl_k0pafb0s)
 
 ># Marco de Entrega 04: Itens 10 e 11 (20 PTS) <br>
 <br>
