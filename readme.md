@@ -1,19 +1,30 @@
 # TRABALHO 01:  Luderia
 Trabalho desenvolvido durante a disciplina de BD1
 
-# Sumário
+### Sumário
 
-### 1. COMPONENTES<br>
+* [Componentes](#componentes)
+* [Minimundo](#minimundo)
+* [Perguntas a serem respondidas](#perguntas)
+* [Modelo conceitual](#conceitual)
+* [Modelo lógico](#logico)
+* [Modelo físico](#fisico)
+* [Inserts aplicados nas tabelas](#inserts)
+* [Tabelas e principais consultas](#tabelas)
+* [Relatórios e gráficos](#relatorios)
+* [Slides e vídeo de apresentação final](#pechakucha)
+
+### 1. COMPONENTES<a name="componentes"></a><br>
 Integrantes do grupo<br>
 Filipe Moura: filipemoura.pessoal@gmail.com<br>
 João Spinassé: jpspinasse@gmail.com<br>
 Marllon Ribeiro: marllon.ribeiro027@gmail.com<br>
 Samuel Ferreira: samuel.ferralves@gmail.com<br>
 
-### 2.MINI-MUNDO<br>
+### 2.MINI-MUNDO<a name="minimundo"></a><br>
 > Uma luderia está se preparando para abrir e solicitou o desenvolvimento de um sistema para apoiar algumas de suas atividades. Luderia é um local onde grupos podem se divertir com jogos de tabuleiro, cartas e RPG enquanto podem comer e beber, como um bar. A luderia em questão precisará de auxílio em alguns campos específicos, como catálogo de  jogos, manutenção dos jogos e controle de comandas. Há duas formas de usufruir dos serviços da luderia. Na primeira, os clientes pagam por um período de tempo e podem jogar quantos jogos desejarem, além de suas expansões, respeitando que só deve haver na mesa um jogo por vez. Na segunda forma, os clientes pagam por um jogo específico, mas precisam pagar um valor extra por cada expansão que desejarem, e caso queiram jogar outro jogo, deverão pagar pelo mesmo. Quando os clientes escolhem uma mesa, deve ser gerada uma comanda única, onde devem constar o número da mesa, o modo de cobrança, os jogos utilizados e, para o modo de cobrança por tempo, o tempo total gasto pelos clientes da mesa. Deve haver uma forma de exibir os jogos disponíveis aos clientes. Os jogos precisam de manutenção quando a luderia os adquire, e também passam por uma manutenção periódica. A Luderia pode possuir mais de uma unidade de alguns dos jogos. Deve haver uma forma de exibir ao funcionário todos os jogos, a quantidade de cada um e permitir que ele informe sobre a disponibilidade de cada exemplar de cada jogo. Um jogo estará disponível caso haja uma unidade que não esteja necessitando de manutenção e não esteja em uso. Um funcionário da luderia é quem retira os jogos do estoque e entrega na mesa. Após a devolução de um jogo, o funcionário verifica se está tudo certo. Caso haja algum dano, uma multa será aplicada e o jogo separado para manutenção. Ainda é necessário possibilitar que os clientes recebam informações sobre promoções, sendo necessário que forneçam alguma forma de contato. 
 
-### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
+### 3.PERGUNTAS A SEREM RESPONDIDAS<a name="perguntas"></a><br>
 A empresa da luderia precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre os jogos mais jogados na luderia.<br>
 * Relatório que mostre os jogos jogados por um cliente específico.<br>
@@ -21,7 +32,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre o estado de conservação dos jogos.<br>
 * Relatório que mostre o tempo de uso médio de cada jogo.<br>
 
-### 5.MODELO CONCEITUAL<br>
+### 5.MODELO CONCEITUAL<a name="conceitual"></a><br>
 
 #### A) Modelo conceitual (Feito utilizando o BRModelo)
 
@@ -68,13 +79,13 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
  	ESTADO_CONSERVACAO: tabela que armazena o estado de conservação dos jogos.
   	ESTADO: campo que armazena o estado de conservação dos jogos.
 
-### 6	MODELO LÓGICO<br>
+### 6	MODELO LÓGICO<a name="logico"></a><br>
 
 ![logico](https://github.com/JP-76/TrabalhoBD1/assets/116752185/5e23617c-1a5b-44ee-8e37-eff983aefb78)
 
 
 
-### 7	[MODELO FÍSICO](script-create.sql)
+### 7	[MODELO FÍSICO](script-create.sql)<a name="fisico"></a>
         
 	DROP TABLE IF EXISTS cliente cascade;
 	DROP TABLE IF EXISTS jogo cascade;
@@ -172,7 +183,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
     	FOREIGN KEY (fk_ESTADO_CONSERVACAO)
     	REFERENCES ESTADO_CONSERVACAO (id);
       
-### 8	[INSERT APLICADO NAS TABELAS DO BANCO DE DADOS](script-insert.sql)
+### 8	[INSERT APLICADO NAS TABELAS DO BANCO DE DADOS](script-insert.sql)<a name="inserts"></a>
 
 	insert into cliente (nome, cpf, sexo, dt_nasc) 
 	values  ('Fabiano', '123.456.789-55', 'M', '1985-07-12'),
@@ -435,7 +446,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 		(3, 19),
 		(2, 20);
 
-### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
+### 9	TABELAS E PRINCIPAIS CONSULTAS<a name="tabelas"></a><br>
     
 Todas as consultas (9.1 a 9.10) estão presentes no colab, disponível pelo url a seguir:
 
@@ -452,13 +463,13 @@ Todas as consultas (9.1 a 9.10) estão presentes no colab, disponível pelo url 
 	9.9	CONSULTAS COM SELF JOIN E VIEW
 	9.10	SUBCONSULTAS
 
-### 10 RELATÓRIOS E GRÁFICOS
+### 10 RELATÓRIOS E GRÁFICOS<a name="relatorios"></a>
 
 Todos os relatórios com seus respectivos gráficos estão disponíveis no link a seguir:
 
 [Relatórios - Google Colaboratory](https://colab.research.google.com/drive/1eNFRiWXf1ggMT6o-r2QcJnJvVFWmh6qC?usp=sharing)
 
-### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
+### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <a name="pechakucha"></a><br>
 
 Link de acesso aos slides: [Slides Pecha Kucha Luderia](https://docs.google.com/presentation/d/11dno_jRLEVtu5WiSvhsk4EX1Icg-ACdjO2u0OETqN4I/edit?usp=sharing)
 
