@@ -10,7 +10,6 @@ João Spinassé: jpspinasse@gmail.com<br>
 Marllon Ribeiro: marllon.ribeiro027@gmail.com<br>
 Samuel Ferreira: samuel.ferralves@gmail.com<br>
 
-
 ### 2.MINI-MUNDO<br>
 > Uma luderia está se preparando para abrir e solicitou o desenvolvimento de um sistema para apoiar algumas de suas atividades. Luderia é um local onde grupos podem se divertir com jogos de tabuleiro, cartas e RPG enquanto podem comer e beber, como um bar. A luderia em questão precisará de auxílio em alguns campos específicos, como catálogo de  jogos, manutenção dos jogos e controle de comandas. Há duas formas de usufruir dos serviços da luderia. Na primeira, os clientes pagam por um período de tempo e podem jogar quantos jogos desejarem, além de suas expansões, respeitando que só deve haver na mesa um jogo por vez. Na segunda forma, os clientes pagam por um jogo específico, mas precisam pagar um valor extra por cada expansão que desejarem, e caso queiram jogar outro jogo, deverão pagar pelo mesmo. Quando os clientes escolhem uma mesa, deve ser gerada uma comanda única, onde devem constar o número da mesa, o modo de cobrança, os jogos utilizados e, para o modo de cobrança por tempo, o tempo total gasto pelos clientes da mesa. Deve haver uma forma de exibir os jogos disponíveis aos clientes. Os jogos precisam de manutenção quando a luderia os adquire, e também passam por uma manutenção periódica. A Luderia pode possuir mais de uma unidade de alguns dos jogos. Deve haver uma forma de exibir ao funcionário todos os jogos, a quantidade de cada um e permitir que ele informe sobre a disponibilidade de cada exemplar de cada jogo. Um jogo estará disponível caso haja uma unidade que não esteja necessitando de manutenção e não esteja em uso. Um funcionário da luderia é quem retira os jogos do estoque e entrega na mesa. Após a devolução de um jogo, o funcionário verifica se está tudo certo. Caso haja algum dano, uma multa será aplicada e o jogo separado para manutenção. Ainda é necessário possibilitar que os clientes recebam informações sobre promoções, sendo necessário que forneçam alguma forma de contato. 
 
@@ -26,11 +25,7 @@ A empresa da luderia precisa inicialmente dos seguintes relatórios:
 
 #### A) Modelo conceitual (Feito utilizando o BRModelo)
 
-
 ![modelo-conceitual](https://github.com/JP-76/TrabalhoBD1/assets/116752185/8fb03ff0-8d11-4a65-af54-5b8e0f12e7b8)
-
-
-
 
 #### B) As entidades mais importantes são:
 * COMANDA
@@ -446,45 +441,32 @@ Todas as consultas (9.1 a 9.10) estão presentes no colab, disponível pelo url 
 
 [Luderia - Google Colaboratory](https://colab.research.google.com/drive/1VzZKK79uiF8zsrykRxGWxu_4Gr6L57TB?usp=sharing)
 
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS
-
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE
-
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS
-
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS
-
-#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS
-
-#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY
-
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO
-
-#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN
-
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW
-
-#### 9.10	SUBCONSULTAS
+	9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS
+	9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE
+	9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS
+	9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS
+	9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS
+	9.6	CONSULTAS COM INNER JOIN E ORDER BY
+	9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO
+	9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN
+	9.9	CONSULTAS COM SELF JOIN E VIEW
+	9.10	SUBCONSULTAS
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
-#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
+Todos os relatórios com seus respectivos gráficos estão disponíveis no link a seguir:
 
-    
+[Relatórios - Google Colaboratory](https://colab.research.google.com/drive/1eNFRiWXf1ggMT6o-r2QcJnJvVFWmh6qC?usp=sharing)
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
-#### a) Modelo (pecha kucha)<br>
-#### b) Tempo de apresentação 6:40 
+Link de acesso aos slides: [Slides Pecha Kucha Luderia](https://docs.google.com/presentation/d/11dno_jRLEVtu5WiSvhsk4EX1Icg-ACdjO2u0OETqN4I/edit?usp=sharing)
+
+Link de acesso ao vídeo: [Vídeo Pecha Kucha Luderia]()
 
 ># Marco de Entrega 04: Itens 10 e 11 (20 PTS) <br>
 <br>
 <br>
-
-
-
 
 ### 12 FORMATACAO NO GIT:<br> 
 https://help.github.com/articles/basic-writing-and-formatting-syntax/
@@ -497,13 +479,11 @@ https://help.github.com/articles/basic-writing-and-formatting-syntax/
     
     https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
     
-    
 ##### Working with advanced formatting
     https://help.github.com/articles/working-with-advanced-formatting/
 #### Mastering Markdown
     https://guides.github.com/features/mastering-markdown/
 
-    
 ### OBSERVAÇÕES IMPORTANTES
 
 #### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
@@ -513,13 +493,9 @@ https://help.github.com/articles/basic-writing-and-formatting-syntax/
 
 #### Os usuários criados no GIT devem possuir o nome de identificação do aluno (não serão aceitos nomes como Eu123, meuprojeto, pro456, etc). Em caso de dúvida comunicar o professor.
 
-
 Link para BrModelo:<br>
 http://www.sis4.com/brModelo/download.html
 <br>
 
-
 Link para curso de GIT<br>
 ![https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
-
-
